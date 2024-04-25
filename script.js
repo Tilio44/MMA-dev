@@ -5,21 +5,12 @@ async function fetchEvents() {
     const filteredEvents = data.events.map(event => ({
       bet_allowed: event.bet_allowed,
       bettable: event.bettable,
-      created: event.created,
-      description: event.description,
-      full_slug: event.full_slug,
-      hidden: event.hidden,
       id: event.id,
-      inplay_enabled: event.inplay_enabled,
       name: event.name,
-      parent_id: event.parent_id,
-      short_name: event.short_name,
-      slug: event.slug,
-      special_rules: event.special_rules,
-      start_date: event.start_date,
       start_datetime: event.start_datetime,
       state: event.state,
-      type: event.type
+      type: event.type,
+      odds: event.odds
     }));
     return filteredEvents;
 }
